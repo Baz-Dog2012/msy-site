@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery – McCormack Stockwell Young Ltd</title>
+
+<style>
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    max-width: 1040px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* ✅ EXPLICITLY VISIBLE LOGO */
+.logo {
+    max-width: 1040px;
+    width: 100%;
+    margin-bottom: 70px;
+    display: block;
+    opacity: 1;   /* <-- this is the fix */
+}
+
+.content {
+    max-width: 995px;
+    margin: 0 auto;
+}
+
+/* image stage */
+.image-stage {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    margin: -120px auto 0 auto;
+}
+
+.image-stage img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+
+    opacity: 0;
+    animation: fadeIn 1.6s ease forwards 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* unified bottom block */
+.nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.nav .block {
+    display: inline-block;
+}
+
+.nav .links {
+    margin-bottom: 20px;
+}
+
+.nav .contact {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.footer p {
+    margin: 0;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <img src="logo.png" alt="MSY" class="logo">
+
+    <div class="content">
+
+        <div class="image-stage">
+            <img src="RoH.jpeg" alt="Royal Opera House">
+        </div>
+
+        <div class="nav">
+
+            <div class="block">
+
+
+<div class="links">
+    <a href="index.html">Home</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="approach.html">Services</a>
+</div>
+
+
+                <div class="contact">
+                    Contact: <a href="mailto:mail@msyeng.co.uk">mail@msyeng.co.uk</a>
+                </div>
+
+                <div class="footer">
+                    <p>
+                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+``

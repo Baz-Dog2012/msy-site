@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services – McCormack Stockwell Young Ltd</title>
+
+<style>
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    max-width: 1040px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 1040px;
+    width: 100%;
+    margin-bottom: 70px;
+    display: block;
+}
+
+.content {
+    max-width: 995px;
+    margin: 0 auto;
+}
+
+/* diagram */
+
+.diagram {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    margin: -120px auto 0 auto;
+}
+
+/* fade */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* rings */
+
+.ring-outer {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #4a4a4a;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.2s;
+}
+
+.ring-middle {
+    position: absolute;
+    top: 315px;
+    left: 315px;
+    width: 270px;
+    height: 270px;
+    border: 1px solid #2f2f2f;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.35s;
+}
+
+.ring-inner {
+    position: absolute;
+    top: 370px;
+    left: 370px;
+    width: 160px;
+    height: 160px;
+    border: 1px solid #3a3a3a;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.5s;
+}
+
+.centre-title {
+    position: absolute;
+    top: 432px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #b0b0b0;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.9s;
+}
+
+.node {
+    position: absolute;
+    width: 240px;
+    margin-left: -120px;
+    text-align: center;
+    opacity: 0;
+}
+
+.node-investigate {
+    top: 120px;
+    left: 450px;
+    animation: fadeIn 0.9s ease forwards 1.3s;
+}
+
+.node-bidsupport {
+    top: 360px;
+    left: 765px;
+    animation: fadeIn 0.9s ease forwards 1.9s;
+}
+
+.node-design {
+    top: 720px;
+    left: 610px;
+    animation: fadeIn 0.9s ease forwards 2.5s;
+}
+
+.node-deliver {
+    top: 720px;
+    left: 290px;
+    animation: fadeIn 0.9s ease forwards 3.1s;
+}
+
+.node-forensic {
+    top: 360px;
+    left: 135px;
+    animation: fadeIn 0.9s ease forwards 3.7s;
+}
+
+.node-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.node-detail {
+    font-size: 14px;
+    color: #7a7a7a;
+    line-height: 1.6;
+}
+
+/* ✅ unified bottom block — THIS is the key */
+
+.nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* group everything together */
+.nav .block {
+    display: inline-block;
+}
+
+/* spacing inside block */
+.nav .links {
+    margin-bottom: 20px;
+}
+
+.nav .contact {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.footer p {
+    margin: 0;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <img src="logo.png" alt="MSY" class="logo">
+
+    <div class="content">
+
+        <div class="diagram">
+
+            <div class="ring-outer"></div>
+            <div class="ring-middle"></div>
+            <div class="ring-inner"></div>
+
+            <div class="centre-title">Services</div>
+
+            <div class="node node-investigate">
+                <div class="node-title">Investigate</div>
+                <div class="node-detail">
+                    Due diligence<br>
+                    Peer reviews
+                </div>
+            </div>
+
+            <div class="node node-bidsupport">
+                <div class="node-title">Bid Support</div>
+                <div class="node-detail">
+                    Identify design and build risk<br>
+                    Mitigate<br>
+                    Redesign
+                </div>
+            </div>
+
+            <div class="node node-design">
+                <div class="node-title">Design</div>
+                <div class="node-detail">
+                    Structural concept design<br>
+                    Detailed design
+                </div>
+            </div>
+
+            <div class="node node-deliver">
+                <div class="node-title">Deliver</div>
+                <div class="node-detail">
+                    Construction methodology<br>
+                    Temporary works
+                </div>
+            </div>
+
+            <div class="node node-forensic">
+                <div class="node-title">Forensic Engineering</div>
+                <div class="node-detail">
+                    Failure analysis<br>
+                    Structural investigation
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ✅ ONE unified block -->
+        <div class="nav">
+
+            <div class="block">
+
+
+<div class="links">
+    <a href="index.html">Home</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="gallery.html">Gallery</a>
+</div>
+
+
+                <div class="contact">
+                    Contact: <a href="mailto:mail@msyeng.co.uk">mail@msyeng.co.uk</a>
+                </div>
+
+                <div class="footer">
+                    <p>
+                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
