@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Gallery – McCormack Stockwell Young Ltd</title>
 
 <style>
@@ -25,13 +27,12 @@ body {
     text-align: center;
 }
 
-/* ✅ EXPLICITLY VISIBLE LOGO */
 .logo {
     max-width: 1040px;
     width: 100%;
     margin-bottom: 70px;
     display: block;
-    opacity: 1;   /* <-- this is the fix */
+    opacity: 1;
 }
 
 .content {
@@ -39,7 +40,8 @@ body {
     margin: 0 auto;
 }
 
-/* image stage */
+/* IMAGE STAGE */
+
 .image-stage {
     position: relative;
     width: 900px;
@@ -54,19 +56,70 @@ body {
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
+}
 
+/* FADE ANIMATION TEMPLATE */
+
+@keyframes fadeOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ROH STACKING & TIMINGS */
+
+.roh1 {
     opacity: 0;
-    animation: fadeIn 3s ease forwards 0.5s;
+    z-index: 1;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 1s;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.roh2 {
+    opacity: 0;
+    z-index: 2;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 4.5s;
 }
 
-/* unified bottom block */
+.roh3 {
+    opacity: 0;
+    z-index: 3;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 8s;
+}
+
+.roh4 {
+    opacity: 0;
+    z-index: 4;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 11.5s;
+}
+
+.roh5 {
+    opacity: 0;
+    z-index: 5;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 15s;
+}
+
+.roh1-final {
+    opacity: 0;
+    z-index: 6;
+    animation: fadeOverlay 2.5s ease forwards;
+    animation-delay: 18.5s;
+}
+
+/* UNIFIED BOTTOM BLOCK */
+
 .nav {
-    margin-top: 10px;
+    position: absolute;
+    top: 905px;
+    left: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -75,11 +128,11 @@ body {
 }
 
 .nav .links {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .nav .contact {
-    margin-bottom: 20px;
+    margin-bottom: 14.35px;
     font-size: 14px;
 }
 
@@ -99,6 +152,7 @@ a {
 }
 
 </style>
+
 </head>
 
 <body>
@@ -110,33 +164,38 @@ a {
     <div class="content">
 
         <div class="image-stage">
-            <img src="RoH.jpeg" alt="Royal Opera House">
-        </div>
 
-        <div class="nav">
+            <img src="roh1.jpg" alt="Royal Opera House" class="roh1">
+            <img src="roh2.jpg" alt="Royal Opera House Structure" class="roh2">
+            <img src="roh3.jpg" alt="Royal Opera House Image 3" class="roh3">
+            <img src="roh4.jpg" alt="Royal Opera House Image 4" class="roh4">
+            <img src="roh5.jpg" alt="Royal Opera House Image 5" class="roh5">
+            <img src="roh1.jpg" alt="Royal Opera House" class="roh1-final">
 
-            <div class="block">
+            <!-- UNIFIED BOTTOM BLOCK -->
+            <div class="nav">
+                <div class="block">
 
+                    <div class="links">
+                        <a href="approach.html">Services</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="gallery.html">Projects</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="profile.html">Profile</a>
+                    </div>
 
-<div class="links">
-    <a href="index.html">Home</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="approach.html">Services</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="profile.html">Profile</a>
-</div>
+                    <div class="contact">
+                        <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                    </div>
 
-                <div class="contact">
-                    <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                    <div class="footer">
+                        <p>
+                            McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                            Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                        </p>
+                    </div>
+
                 </div>
-
-                <div class="footer">
-                    <p>
-                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
-                    </p>
-                </div>
-
             </div>
 
         </div>
@@ -147,4 +206,3 @@ a {
 
 </body>
 </html>
-``
