@@ -37,24 +37,21 @@ body {
     margin: 0 auto;
 }
 
-/* diagram */
-
-.diagram {
+/* UNIFIED STAGE FRAME */
+.stage-container {
     position: relative;
     width: 900px;
     height: 900px;
     margin: -120px auto 0 auto;
 }
 
-/* fade */
-
+/* FADE */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* rings */
-
+/* RINGS */
 .ring-outer {
     position: absolute;
     top: 250px;
@@ -153,25 +150,31 @@ body {
     line-height: 1.6;
 }
 
-/* ✅ unified bottom block — THIS is the key */
-
+/* UNIFIED BOTTOM BLOCK */
 .nav {
-    margin-top: 10px;
+    position: absolute;
+    top: 905px;
+    left: 0;
+    width: 100%;
     text-align: center;
 }
 
-/* group everything together */
 .nav .block {
     display: inline-block;
 }
 
-/* spacing inside block */
 .nav .links {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.nav .links a.active {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: default;
 }
 
 .nav .contact {
-    margin-bottom: 20px;
+    margin-bottom: 14.35px;
     font-size: 14px;
 }
 
@@ -201,7 +204,7 @@ a {
 
     <div class="content">
 
-        <div class="diagram">
+        <div class="stage-container">
 
             <div class="ring-outer"></div>
             <div class="ring-middle"></div>
@@ -249,35 +252,30 @@ a {
                 </div>
             </div>
 
-        </div>
+            <!-- UNIFIED BOTTOM BLOCK -->
+            <div class="nav">
+                <div class="block">
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="approach.html" class="active">Services</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="gallery.html">Projects</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="profile.html">Profile</a>
+                    </div>
 
-        <!-- ✅ ONE unified block -->
-        <div class="nav">
+                    <div class="contact">
+                        <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                    </div>
 
-            <div class="block">
-
-
-<div class="links">
-    <a href="index.html">Home</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="gallery.html">Projects</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="profile.html">Profile</a>
-</div>
-
-
-
-                <div class="contact">
-                    <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                    <div class="footer">
+                        <p>
+                        McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                        Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                        </p>
+                    </div>
                 </div>
-
-                <div class="footer">
-                    <p>
-                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
-                    </p>
-                </div>
-
             </div>
 
         </div>

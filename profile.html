@@ -25,7 +25,6 @@ body {
     text-align: center;
 }
 
-/* logo */
 .logo {
     max-width: 1040px;
     width: 100%;
@@ -33,7 +32,6 @@ body {
     display: block;
 }
 
-/* content */
 .content {
     max-width: 995px;
     margin: 0 auto;
@@ -44,8 +42,8 @@ body {
     to { opacity: 1; }
 }
 
-/* stage */
-.profile-stage {
+/* UNIFIED STAGE FRAME */
+.stage-container {
     position: relative;
     width: 900px;
     height: 900px;
@@ -55,7 +53,7 @@ body {
     animation: fadeIn 3s ease forwards 0.5s;
 }
 
-/* image */
+/* IMAGE STAGE */
 .image-stage {
     position: absolute;
     top: 90px;
@@ -71,12 +69,12 @@ body {
     max-width: 100%;
 }
 
-/* credentials */
+/* CREDENTIALS */
 .profile-credentials {
     position: absolute;
     top: 630px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
     text-align: center;
     line-height: 1.45;
 }
@@ -104,12 +102,11 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* text */
+/* TEXT */
 .profile-text {
     position: absolute;
     top: 700px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 75px;
     width: 750px;
     text-align: left;
     line-height: 1.6;
@@ -121,9 +118,12 @@ body {
     margin-bottom: 8px;
 }
 
-/* nav */
+/* UNIFIED BOTTOM BLOCK */
 .nav {
-    margin-top: 10px;
+    position: absolute;
+    top: 905px;
+    left: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -132,11 +132,17 @@ body {
 }
 
 .nav .links {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.nav .links a.active {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: default;
 }
 
 .nav .contact {
-    margin-bottom: 20px;
+    margin-bottom: 14.35px;
     font-size: 14px;
 }
 
@@ -166,25 +172,25 @@ a {
 
     <div class="content">
 
-        <div class="profile-stage">
+        <div class="stage-container">
 
             <div class="image-stage">
                 <img src="barry.jpg" alt="Barry McCormack">
             </div>
 
             <div class="profile-credentials">
-    <div class="name">
-        Barry McCormack BEng(Hons) CEng MIStructE
-    </div>
+                <div class="name">
+                    Barry McCormack BEng(Hons) CEng MIStructE
+                </div>
 
-    <div class="role">
-        Director
-    </div>
+                <div class="role">
+                    Director
+                </div>
 
-    <div class="ser">
-        Approved Certifier of Design (Building Structures)
-    </div>
-</div>
+                <div class="ser">
+                    Approved Certifier of Design (Building Structures)
+                </div>
+            </div>
 
             <div class="profile-text">
                 <p>
@@ -200,31 +206,30 @@ a {
                 </p>
             </div>
 
-        </div>
+            <!-- UNIFIED BOTTOM BLOCK -->
+            <div class="nav">
+                <div class="block">
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="approach.html">Services</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="gallery.html">Projects</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="profile.html" class="active">Profile</a>
+                    </div>
 
-        <div class="nav">
+                    <div class="contact">
+                        <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                    </div>
 
-            <div class="block">
-
-                <div class="links">
-                    <a href="index.html">Home</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="approach.html">Services</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="gallery.html">Projects</a>
+                    <div class="footer">
+                        <p>
+                        McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                        Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                        </p>
+                    </div>
                 </div>
-
-                <div class="contact">
-                    <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
-                </div>
-
-                <div class="footer">
-                    <p>
-                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
-                    </p>
-                </div>
-
             </div>
 
         </div>

@@ -40,16 +40,15 @@ body {
     margin: 0 auto;
 }
 
-/* IMAGE STAGE */
-
-.image-stage {
+/* UNIFIED STAGE FRAME */
+.stage-container {
     position: relative;
     width: 900px;
     height: 900px;
     margin: -120px auto 0 auto;
 }
 
-.image-stage img {
+.stage-container img.roh-slide {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,62 +58,76 @@ body {
 }
 
 /* FADE ANIMATION TEMPLATE */
-
 @keyframes fadeOverlay {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* ROH STACKING & TIMINGS */
-
 .roh1 {
     opacity: 0;
     z-index: 1;
-    animation: fadeOverlay 2.5s ease forwards;
+    animation: fadeOverlay 2s ease forwards;
     animation-delay: 1s;
 }
 
 .roh2 {
     opacity: 0;
     z-index: 2;
-    animation: fadeOverlay 2.5s ease forwards;
-    animation-delay: 4.5s;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 3.4s;
 }
 
 .roh3 {
     opacity: 0;
     z-index: 3;
-    animation: fadeOverlay 2.5s ease forwards;
-    animation-delay: 8s;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 5.8s;
+}
+
+.roh3a {
+    opacity: 0;
+    z-index: 4;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 8.2s;
+}
+
+.roh3b {
+    opacity: 0;
+    z-index: 5;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 10.6s;
 }
 
 .roh4 {
     opacity: 0;
-    z-index: 4;
-    animation: fadeOverlay 2.5s ease forwards;
-    animation-delay: 11.5s;
+    z-index: 6;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 13s;
+}
+
+.roh4a {
+    opacity: 0;
+    z-index: 7;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 15.4s;
 }
 
 .roh5 {
     opacity: 0;
-    z-index: 5;
-    animation: fadeOverlay 2.5s ease forwards;
-    animation-delay: 15s;
+    z-index: 8;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 17.8s;
 }
 
 .roh1-final {
     opacity: 0;
-    z-index: 6;
-    animation: fadeOverlay 2.5s ease forwards;
-    animation-delay: 18.5s;
+    z-index: 9;
+    animation: fadeOverlay 2s ease forwards;
+    animation-delay: 20.2s;
 }
 
 /* UNIFIED BOTTOM BLOCK */
-
 .nav {
     position: absolute;
     top: 905px;
@@ -129,6 +142,12 @@ body {
 
 .nav .links {
     margin-bottom: 10px;
+}
+
+.nav .links a.active {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: default;
 }
 
 .nav .contact {
@@ -163,23 +182,27 @@ a {
 
     <div class="content">
 
-        <div class="image-stage">
+        <div class="stage-container">
 
-            <img src="roh1.jpg" alt="Royal Opera House" class="roh1">
-            <img src="roh2.jpg" alt="Royal Opera House Structure" class="roh2">
-            <img src="roh3.jpg" alt="Royal Opera House Image 3" class="roh3">
-            <img src="roh4.jpg" alt="Royal Opera House Image 4" class="roh4">
-            <img src="roh5.jpg" alt="Royal Opera House Image 5" class="roh5">
-            <img src="roh1.jpg" alt="Royal Opera House" class="roh1-final">
+            <img src="roh1.jpg" alt="Royal Opera House" class="roh-slide roh1">
+            <img src="roh2.jpg" alt="Royal Opera House Structure" class="roh-slide roh2">
+            <img src="roh3.jpg" alt="Royal Opera House Image 3" class="roh-slide roh3">
+            <img src="roh3a.jpg" alt="Royal Opera House Image 3a" class="roh-slide roh3a">
+            <img src="roh3b.jpg" alt="Royal Opera House Image 3b" class="roh-slide roh3b">
+            <img src="roh4.jpg" alt="Royal Opera House Image 4" class="roh-slide roh4">
+            <img src="roh4a.jpg" alt="Royal Opera House Image 4a" class="roh-slide roh4a">
+            <img src="roh5.jpg" alt="Royal Opera House Image 5" class="roh-slide roh5">
+            <img src="roh1.jpg" alt="Royal Opera House" class="roh-slide roh1-final">
 
             <!-- UNIFIED BOTTOM BLOCK -->
             <div class="nav">
                 <div class="block">
-
                     <div class="links">
+                        <a href="index.html">Home</a>
+                        &nbsp;&nbsp;&nbsp;
                         <a href="approach.html">Services</a>
                         &nbsp;&nbsp;&nbsp;
-                        <a href="gallery.html">Projects</a>
+                        <a href="gallery.html" class="active">Projects</a>
                         &nbsp;&nbsp;&nbsp;
                         <a href="profile.html">Profile</a>
                     </div>
@@ -190,11 +213,10 @@ a {
 
                     <div class="footer">
                         <p>
-                            McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                            Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                        McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                        Registered Office: 843 Finchley Road, London, England, NW11 8NA
                         </p>
                     </div>
-
                 </div>
             </div>
 
