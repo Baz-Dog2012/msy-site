@@ -23,6 +23,7 @@ body {
     margin: auto;
     padding: 80px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -31,48 +32,46 @@ body {
     margin-bottom: 70px;
     display: block;
 
+    /* LOGO FADE ANIMATION FROM ORIGINAL */
     opacity: 0;
-    animation: fadeInLogo 3s ease forwards;
-    animation-delay: 0.5s;
+    animation: fadeIn 3s ease forwards 0.5s;
 }
 
 .content {
     max-width: 995px;
     margin: 0 auto;
-    text-align: left;
-    line-height: 1.8;
 
+    /* CONTENT FADE ANIMATION FROM ORIGINAL */
     opacity: 0;
-    animation: fadeInContent 3s ease forwards;
-    animation-delay: 1.5s;
+    animation: fadeIn 3s ease forwards 1.5s;
 }
 
-/* SAME vertical frame as services/gallery */
-.index-stage {
+/* UNIFIED STAGE FRAME */
+.stage-container {
     position: relative;
-    width: 995px;
-    height: 900px;
-    margin: -120px auto 0 auto;
+    width: 900px;
+    height: 700px;
+    margin: -50px auto 0 auto;
 }
 
 .statement {
     position: absolute;
     top: 120px;
-    left: 0;
-    width: 100%;
+    left: 75px;
+    width: 750px;
+    text-align: left;
+    line-height: 1.8;
 }
 
 .statement p {
     margin-bottom: 22px;
 }
 
-/* ✅ unified bottom block (copy of approach/gallery) */
+/* UNIFIED BOTTOM BLOCK */
 .nav {
-    position: absolute;
-    top: 905px;
-    left: 0;
     width: 100%;
     text-align: center;
+    margin-top: 40px;
 }
 
 .nav .block {
@@ -81,6 +80,12 @@ body {
 
 .nav .links {
     margin-bottom: 10px;
+}
+
+.nav .links a.active {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: default;
 }
 
 .nav .contact {
@@ -103,14 +108,61 @@ a {
     text-decoration: none;
 }
 
-@keyframes fadeInLogo {
+/* KEYFRAMES */
+@keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-@keyframes fadeInContent {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+        opacity: 1;
+        animation: none;
+    }
+
+    .content {
+        opacity: 1;
+        animation: none;
+    }
+
+    .stage-container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .statement {
+        position: static;
+        width: 100%;
+        text-align: left;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .nav {
+        margin-top: 30px;
+        font-size: 13px;
+    }
+
+    .nav .links a {
+        display: inline-block;
+        margin: 0 5px 10px 5px;
+    }
+
+    .nav .contact {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 11px;
+    }
 }
 
 </style>
@@ -124,60 +176,52 @@ a {
 
     <div class="content">
 
-        <div class="index-stage">
+        <div class="stage-container">
 
-            
-<div class="statement">
+            <div class="statement">
+                <p>
+                Independent, confidential advice for complex structural problems.
+                </p>
 
-    <p>
-    Independent, confidential advice for complex structural problems.
-    </p>
+                <p>
+                McCormack Stockwell Young provides structural engineering design, assessment and technical advice throughout the United Kingdom.
+                </p>
 
-    <p>
-    McCormack Stockwell Young provides structural engineering design, assessment and technical advice throughout the United Kingdom.
-    </p>
+                <p>
+                We are typically engaged where projects are complex, constrained, unusual, or where a clear path forward is not immediately apparent.
+                </p>
 
-    <p>
-    We are typically engaged where projects are complex, constrained, unusual, or where a clear path forward is not immediately apparent.
-    </p>
-
-    <p>
-    Structural judgement. Practical experience. Responsibility.
-    </p>
-
-</div>
-
-
-            <!-- ✅ ONE unified block — identical behaviour -->
-            <div class="nav">
-
-                <div class="block">
-
-
-<div class="links">
-    <a href="approach.html">Services</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="gallery.html">Projects</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="profile.html">Profile</a>
-</div>
-
-
-                    <div class="contact">
-                        <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
-                    </div>
-
-                    <div class="footer">
-                        <p>
-                        McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                        Registered Office: 843 Finchley Road, London, England, NW11 8NA
-                        </p>
-                    </div>
-
-                </div>
-
+                <p>
+                Structural judgement. Practical experience. Responsibility.
+                </p>
             </div>
 
+        </div>
+
+        <!-- UNIFIED BOTTOM BLOCK (RESTORED ALL 4 LINKS) -->
+        <div class="nav">
+            <div class="block">
+                <div class="links">
+                    <a href="index.html" class="active">Home</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="approach.html">Services</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="gallery.html">Projects</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="profile.html">Profile</a>
+                </div>
+
+                <div class="contact">
+                    <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                </div>
+
+                <div class="footer">
+                    <p>
+                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -186,4 +230,3 @@ a {
 
 </body>
 </html>
-``
