@@ -23,6 +23,7 @@ body {
     margin: auto;
     padding: 80px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -193,6 +194,59 @@ a {
     text-decoration: none;
 }
 
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+    }
+
+    .stage-container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Hide diagram elements on mobile */
+    .ring-outer,
+    .ring-middle,
+    .ring-inner {
+        display: none;
+    }
+
+    .centre-title {
+        position: static;
+        margin-bottom: 30px;
+        font-size: 20px;
+        opacity: 1;
+    }
+
+    /* Convert nodes into a vertical stack */
+    .node {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 35px;
+        opacity: 1;
+    }
+
+    .nav {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .nav .links a {
+        display: inline-block;
+        margin: 0 5px 10px 5px;
+    }
+}
+
 </style>
 </head>
 
@@ -248,7 +302,7 @@ a {
             <div class="node node-forensic">
                 <div class="node-title">Forensic Engineering</div>
                 <div class="node-detail">
-                    The objective is to understand the structural reality<br>
+                    The objective is to understand the structural reality
                 </div>
             </div>
 

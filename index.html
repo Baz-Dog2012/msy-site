@@ -23,6 +23,7 @@ body {
     margin: auto;
     padding: 80px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -99,6 +100,45 @@ body {
 a {
     color: #bbb;
     text-decoration: none;
+}
+
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+    }
+
+    .stage-container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .statement {
+        position: static;
+        width: 100%;
+        text-align: left;
+        line-height: 1.6;
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .nav {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .nav .links a {
+        display: inline-block;
+        margin: 0 5px 10px 5px;
+    }
 }
 
 </style>

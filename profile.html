@@ -23,6 +23,7 @@ body {
     margin: auto;
     padding: 80px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -159,6 +160,63 @@ body {
 a {
     color: #bbb;
     text-decoration: none;
+}
+
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+    }
+
+    .stage-container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        opacity: 1; /* Retain visible structure immediately on mobile */
+        animation: none;
+    }
+
+    .image-stage {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .image-stage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-credentials {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-text {
+        position: static;
+        width: 100%;
+        left: auto;
+        margin-bottom: 40px;
+    }
+
+    .nav {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nav .links a {
+        display: inline-block;
+        margin: 0 5px 10px 5px;
+    }
 }
 
 </style>
