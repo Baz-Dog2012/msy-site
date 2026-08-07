@@ -178,24 +178,26 @@ a {
     }
 
     .logo {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .stage-container {
         width: 100%;
-        height: auto;
-        min-height: 320px;
+        height: 56vw;
+        max-height: 480px;
+        min-height: 220px;
         margin: 0 auto;
     }
 
     .stage-container img.roh-slide {
-        position: relative;
-        top: auto;
-        left: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
         transform: none;
         width: 100%;
-        height: auto;
-        margin-bottom: -100%; /* Keeps slideshow stacked vertically on mobile */
+        height: 100%;
+        object-fit: contain;
+        margin-bottom: 0;
     }
 
     .nav {
@@ -203,12 +205,21 @@ a {
         top: auto;
         left: auto;
         width: 100%;
-        margin-top: 360px;
+        margin-top: 40px;
+        font-size: 13px;
     }
 
     .nav .links a {
         display: inline-block;
         margin: 0 5px 10px 5px;
+    }
+
+    .nav .contact {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 11px;
     }
 }
 
