@@ -42,8 +42,8 @@ body {
 .stage-container {
     position: relative;
     width: 900px;
-    height: 900px;
-    margin: -120px auto 0 auto;
+    height: 700px;
+    margin: -50px auto 0 auto;
 }
 
 /* FADE */
@@ -55,7 +55,7 @@ body {
 /* RINGS */
 .ring-outer {
     position: absolute;
-    top: 250px;
+    top: 150px;
     left: 250px;
     width: 400px;
     height: 400px;
@@ -67,7 +67,7 @@ body {
 
 .ring-middle {
     position: absolute;
-    top: 315px;
+    top: 215px;
     left: 315px;
     width: 270px;
     height: 270px;
@@ -79,7 +79,7 @@ body {
 
 .ring-inner {
     position: absolute;
-    top: 370px;
+    top: 270px;
     left: 370px;
     width: 160px;
     height: 160px;
@@ -91,7 +91,7 @@ body {
 
 .centre-title {
     position: absolute;
-    top: 432px;
+    top: 332px;
     width: 100%;
     text-align: center;
     font-size: 22px;
@@ -110,31 +110,31 @@ body {
 }
 
 .node-investigate {
-    top: 120px;
+    top: 20px;
     left: 450px;
     animation: fadeIn 0.9s ease forwards 1.3s;
 }
 
 .node-bidsupport {
-    top: 360px;
+    top: 260px;
     left: 765px;
     animation: fadeIn 0.9s ease forwards 1.9s;
 }
 
 .node-design {
-    top: 720px;
+    top: 520px;
     left: 610px;
     animation: fadeIn 0.9s ease forwards 2.5s;
 }
 
 .node-delivery {
-    top: 720px;
+    top: 520px;
     left: 290px;
     animation: fadeIn 0.9s ease forwards 3.1s;
 }
 
 .node-forensic {
-    top: 360px;
+    top: 260px;
     left: 135px;
     animation: fadeIn 0.9s ease forwards 3.7s;
 }
@@ -153,11 +153,9 @@ body {
 
 /* UNIFIED BOTTOM BLOCK */
 .nav {
-    position: absolute;
-    top: 905px;
-    left: 0;
     width: 100%;
     text-align: center;
+    margin-top: 40px;
 }
 
 .nav .block {
@@ -201,7 +199,7 @@ a {
     }
 
     .logo {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .stage-container {
@@ -210,7 +208,6 @@ a {
         margin: 0 auto;
     }
 
-    /* Hide diagram elements on mobile */
     .ring-outer,
     .ring-middle,
     .ring-inner {
@@ -220,30 +217,44 @@ a {
     .centre-title {
         position: static;
         margin-bottom: 30px;
-        font-size: 20px;
+        font-size: 18px;
         opacity: 1;
     }
 
-    /* Convert nodes into a vertical stack */
     .node {
         position: static;
         width: 100%;
         margin-left: 0;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         opacity: 1;
     }
 
+    .node-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .node-detail {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
     .nav {
-        position: static;
-        top: auto;
-        left: auto;
-        width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
+        font-size: 13px;
     }
 
     .nav .links a {
         display: inline-block;
         margin: 0 5px 10px 5px;
+    }
+
+    .nav .contact {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 11px;
     }
 }
 
@@ -306,32 +317,32 @@ a {
                 </div>
             </div>
 
-            <!-- UNIFIED BOTTOM BLOCK -->
-            <div class="nav">
-                <div class="block">
-                    <div class="links">
-                        <a href="index.html">Home</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="approach.html" class="active">Services</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="gallery.html">Projects</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="profile.html">Profile</a>
-                    </div>
+        </div>
 
-                    <div class="contact">
-                        <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
-                    </div>
+        <!-- UNIFIED BOTTOM BLOCK -->
+        <div class="nav">
+            <div class="block">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="approach.html" class="active">Services</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="gallery.html">Projects</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="profile.html">Profile</a>
+                </div>
 
-                    <div class="footer">
-                        <p>
-                        McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
-                        Registered Office: 843 Finchley Road, London, England, NW11 8NA
-                        </p>
-                    </div>
+                <div class="contact">
+                    <a href="mailto:engineering@msyeng.co.uk">engineering@msyeng.co.uk</a>
+                </div>
+
+                <div class="footer">
+                    <p>
+                    McCormack Stockwell Young Limited · Registered in England and Wales · Company No. 11981229 · VAT No. 326102250<br>
+                    Registered Office: 843 Finchley Road, London, England, NW11 8NA
+                    </p>
                 </div>
             </div>
-
         </div>
 
     </div>
